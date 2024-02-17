@@ -1,0 +1,212 @@
+[
+  {
+    "model": "jobs.company",
+    "pk": "126be54a-009a-4a58-b4fe-4d487b7786b7",
+    "fields": {
+      "company_name": "Maker",
+      "logo": "logos/maker.svg",
+      "company_color": "#21437D",
+      "website": "https://example.com/maker"
+    }
+  },
+  {
+    "model": "jobs.company",
+    "pk": "2271e102-71d6-4573-bd7a-e4193b613396",
+    "fields": {
+      "company_name": "Office Lite",
+      "logo": "logos/officelite.svg",
+      "company_color": "#2F4FC6",
+      "website": "https://example.com/officelite"
+    }
+  },
+  {
+    "model": "jobs.company",
+    "pk": "3efb3850-4bc3-4ff8-b606-be4d5af30c53",
+    "fields": {
+      "company_name": "Coffeeroasters",
+      "logo": "logos/coffeeroasters.svg",
+      "company_color": "#F2DDCA",
+      "website": "https://example.com/coffeeroasters"
+    }
+  },
+  {
+    "model": "jobs.company",
+    "pk": "57e28dd5-20ee-49be-a25a-02f981f12d21",
+    "fields": {
+      "company_name": "Crowdfund",
+      "logo": "logos/crowdfund.svg",
+      "company_color": "#37C890",
+      "website": "https://example.com/crowdfund"
+    }
+  },
+  {
+    "model": "jobs.company",
+    "pk": "70acb314-4875-4f72-8618-bb2deaec55d3",
+    "fields": {
+      "company_name": "Creative",
+      "logo": "logos/creative.svg",
+      "company_color": "#4E1853",
+      "website": "https://example.com/creative"
+    }
+  },
+  {
+    "model": "jobs.company",
+    "pk": "92119e75-2148-49bc-863e-2050cace35a5",
+    "fields": {
+      "company_name": "Pod",
+      "logo": "logos/pod.svg",
+      "company_color": "#132034",
+      "website": "https://example.com/pod"
+    }
+  },
+  {
+    "model": "jobs.company",
+    "pk": "ab83391d-261b-4c58-89e1-346656ac91a5",
+    "fields": {
+      "company_name": "Scoot",
+      "logo": "logos/scoot.svg",
+      "company_color": "#EA9310",
+      "website": "https://example.com/scoot"
+    }
+  },
+  {
+    "model": "jobs.company",
+    "pk": "baf06de5-ac39-49b8-84c7-b4e41aa68be0",
+    "fields": {
+      "company_name": "Typemaster",
+      "logo": "logos/typemaster.svg",
+      "company_color": "#F26818",
+      "website": "https://example.com/typemaster"
+    }
+  },
+  {
+    "model": "jobs.company",
+    "pk": "c7441a84-7b5d-47ac-b16a-fd4ad7ad713c",
+    "fields": {
+      "company_name": "Vector",
+      "logo": "logos/vector.svg",
+      "company_color": "#353641",
+      "website": "https://example.com/vector"
+    }
+  },
+  {
+    "model": "jobs.company",
+    "pk": "db88119d-b4c4-419d-a026-460735deb81f",
+    "fields": {
+      "company_name": "Mastercraft",
+      "logo": "logos/mastercraft.svg",
+      "company_color": "#1F1F1F",
+      "website": "https://example.com/mastercraft"
+    }
+  },
+  {
+    "model": "jobs.company",
+    "pk": "e117ff2f-96e1-4b13-a9d7-8eab052b9be7",
+    "fields": {
+      "company_name": "Pomodoro",
+      "logo": "logos/pomodoro.svg",
+      "company_color": "#4721C4",
+      "website": "https://example.com/pomodoro"
+    }
+  },
+  {
+    "model": "jobs.company",
+    "pk": "f1bf3bc6-f950-4644-b77f-3b213dfb9091",
+    "fields": {
+      "company_name": "Blogr",
+      "logo": "logos/blogr.svg",
+      "company_color": "#E54B24",
+      "website": "https://example.com/blogr"
+    }
+  },
+  {
+    "model": "jobs.job",
+    "pk": "1644f3aa-601d-42a5-b647-fa886b140eb1",
+    "fields": {
+      "position": "Desktop Support Manager",
+      "posted_at": "2023-12-27",
+      "contract": "part_time",
+      "location": "Germany",
+      "company": "70acb314-4875-4f72-8618-bb2deaec55d3",
+      "apply": "https://example.com/creative",
+      "description": "<p><span style=\"color:#ce9178;\">Creative is seeking a Desktop Support Manager responsible for managing and leading a high-performance team in a dynamic environment. The ideal candidate should have management experience, a strong technical skillset, exceptional client service skills and enjoy mentoring a team.</span></p><p>&nbsp;</p><p>&nbsp;</p>",
+      "requirements": "<p><span style=\"color:#ce9178;\">You are likely someone with a solid background in end-user support and troubleshooting, as this position involves dealing with a large, and often changing, number of day-to-day issues which arise in supporting the information technology requirements of our applications.</span></p><ul><li><span style=\"color:#ce9178;\">Bachelor’s degree in IT or related field.</span></li><li><span style=\"color:#ce9178;\">5+ years demonstrating strong technical skills supporting end users.</span></li><li><span style=\"color:#ce9178;\">3+ years in a leadership capacity (Team Lead, Supervisor, or Manager).</span></li><li><span style=\"color:#ce9178;\">Experience using Professional Services Automation (PSA) tools or ticketing platforms such as ConnectWise, Autotask, ServiceNow, etc.</span></li><li><span style=\"color:#ce9178;\">Possess and demonstrate excellent interpersonal/communication skills.</span></li></ul><p>&nbsp;</p><p>&nbsp;</p>",
+      "role": "<p><span style=\"color:#ce9178;\">This is an 80% management and 20% hands-on supervisory role where you will be responsible for the support of automation technologies and managing a team of support engineers in a 24x7 high-volume environment.</span></p><ul><li><span style=\"color:#ce9178;\">Lead, coach and manage service desk teams on a daily basis to improve customer service and efficiency.</span></li><li><span style=\"color:#ce9178;\">Implement best practices and standardize service desk processes to provide exceptional “white glove” service and deliverable.</span></li><li><span style=\"color:#ce9178;\">Oversee the work performed by the team to help prioritize open tickets and tasks.</span></li><li><span style=\"color:#ce9178;\">Provide guidance and direction on technical issues.</span></li><li><span style=\"color:#ce9178;\">Develop and maintain KPIs for measuring team performance and improving customer experience.</span></li><li><span style=\"color:#ce9178;\">Provide status reports to management and collaborate on new initiatives and technical planning.</span></li></ul><p>&nbsp;</p><p>&nbsp;</p>"
+    }
+  },
+  {
+    "model": "jobs.job",
+    "pk": "23e31891-8511-46dc-98c4-99fe60803db5",
+    "fields": {
+      "position": "Senior Software Engineer",
+      "posted_at": "2024-02-17",
+      "contract": "full_time",
+      "location": "United Kingdom",
+      "company": "ab83391d-261b-4c58-89e1-346656ac91a5",
+      "apply": "https://example.com/scoot/apply",
+      "description": "<p><span style=\"color:#ce9178;\">Scoot is looking for a Senior Software Engineer passionate about building approachable, innovative and user-first experiences to join our small but growing Engineering team. You will be responsible for building and maintaining front end functionality across all of Scoot’s applications, fostering a growing team of software engineers, and helping drive and maintain best software patterns and practices in our codebase.</span></p>",
+      "requirements": "<p><span style=\"color:#ce9178;\">The ideal candidate is as passionate about solving challenges through technology. They are well-versed in building proof of concepts from scratch and taking these POCs to production and scale. The right fit will have the engineering experience to build and iterate quickly and is comfortable working with product and design to set the technical strategy and roadmap.</span></p><p>&nbsp;</p><ul><li><span style=\"color:#ce9178;\">5+ years of industry experience in a software engineering role, preferably building a SaaS product. You can demonstrate significant impact that your work has had on the product and/or the team.</span></li><li><span style=\"color:#ce9178;\">Experience with scalable distributed systems, both built from scratch as well as on AWS primitives.</span></li><li><span style=\"color:#ce9178;\">Extremely data-driven.</span></li><li><span style=\"color:#ce9178;\">Ability to debug complex systems.</span></li></ul>",
+      "role": "<p><span style=\"color:#ce9178;\">We are looking for a Senior Software Engineer to join as one of our first hires. As we iterate on our MVP, you will have the opportunity to drive the vision and own the build behind our digital experience. You’ll have the support of an experienced technical advisor, a Head of Product, and an external team to work with.</span></p><ul><li><span style=\"color:#ce9178;\">This role is for someone who is excited about the early stage - you’ll be responsible for turning the platform vision into reality through smart, efficient building and testing.</span></li><li><span style=\"color:#ce9178;\">Translate the product roadmap into engineering requirements and own the engineering roadmap.</span></li><li><span style=\"color:#ce9178;\">Work with limited resources to test and learn as efficiently as possible, while laying the framework to build a more scalable product over time.</span></li><li><span style=\"color:#ce9178;\">Collaborate with product, design, and external engineering teammates as needed.</span></li></ul>"
+    }
+  },
+  {
+    "model": "jobs.job",
+    "pk": "4f739747-215a-4356-a92b-49bf8974933e",
+    "fields": {
+      "position": "Remote DevOps Engineer",
+      "posted_at": "2024-02-02",
+      "contract": "part_time",
+      "location": "Japan",
+      "company": "92119e75-2148-49bc-863e-2050cace35a5",
+      "apply": "https://example.com/pod",
+      "description": "<p><span style=\"color:#ce9178;\">Join our dynamic team in developing Pod’s core products and supporting infrastructure. Our software is currently written in Java, VB.Net, React Native, React JS and others. You will help lead new initiatives to build and improve the testing, staging and deployment solutions. You will interact with all development teams, development leadership and our hosting/IT staff to define requirements and goals for the Dev Ops Platform.</span></p><p>&nbsp;</p>",
+      "requirements": "<p><span style=\"color:#ce9178;\">We are looking for talented and motivated engineers who can hit the ground running and take our products to the next level. The engineers who are building our platform across the stack are always willing to go the extra mile to deliver the highest quality software and client experiences. Ideally, you would have:</span></p><ul><li><span style=\"color:#ce9178;\">Bachelor's degree preferred, strong preference for Computer Science field of study.</span></li><li><span style=\"color:#ce9178;\">Minimum of 5 years of relevant work experience.</span></li><li><span style=\"color:#ce9178;\">Hands-on experience with configuring and maintaining resources on AWS.</span></li><li><span style=\"color:#ce9178;\">Experience and solid understanding to deploy and maintain container orchestration platforms such as ECS or Kubernetes.</span></li><li><span style=\"color:#ce9178;\">Knowledge of networking fundamentals.</span></li><li><span style=\"color:#ce9178;\">Expertise with cloud security, understand the principle of least privilege.</span></li><li><span style=\"color:#ce9178;\">Strong written and verbal communication skills.</span></li></ul><p>&nbsp;</p><p>&nbsp;</p>",
+      "role": "<p><span style=\"color:#ce9178;\">You will work closely with development teams to implement automation solutions using technologies like Amazon Web Services (AWS), Ansible, Jenkins, and Kubernetes to automatically build, test, integrate, and deploy complex, modern systems. You will leverage the full power of the cloud to configure highly resilient and scalable applications that support zero downtime. This position is open to a mid-level to senior professional depending on experience and background.</span></p><ul><li><span style=\"color:#ce9178;\">Configure and maintain resources on AWS.</span></li><li><span style=\"color:#ce9178;\">Maintain infrastructure as code using Terraform, CloudFormation, and/or Ansible.</span></li><li><span style=\"color:#ce9178;\">Responsible for production deployments using Jenkins, CodeDeploy, GitHub Actions.</span></li><li><span style=\"color:#ce9178;\">Manage security groups and access controls.</span></li><li><span style=\"color:#ce9178;\">Use ticket management system such as Jira and Confluence to manage work priorities.</span></li><li><span style=\"color:#ce9178;\">Ability to clearly articulate and communicate complex technical ideas to non-DevOps colleagues.</span></li></ul><p>&nbsp;</p><p>&nbsp;</p>"
+    }
+  },
+  {
+    "model": "jobs.job",
+    "pk": "79bc0fea-8502-4755-b309-66dd3dbc9e94",
+    "fields": {
+      "position": "Haskell and PureScript Dev",
+      "posted_at": "2024-02-08",
+      "contract": "part_time",
+      "location": "United States",
+      "company": "f1bf3bc6-f950-4644-b77f-3b213dfb9091",
+      "apply": "https://example.com/blogr/apply",
+      "description": "<p><span style=\"color:#ce9178;\">Blogr is looking for a part-time developer to join our six-strong team of full-stack engineers. Our core development values are strong, static typing and correctness, rigorous automation (in both testing and infrastructure) and everyone having a say.</span></p>",
+      "requirements": "<p><span style=\"color:#ce9178;\">We are looking to carefully add great developers which care about solving problems &amp; which have been in a relationship with Purescript and/or Haskell for at least 3 years (Not necessarily monogamous though).</span></p><p>&nbsp;</p><ul><li><span style=\"color:#ce9178;\">You have a knack for UI design.</span></li><li><span style=\"color:#ce9178;\">Have Haskell or Purescript knowledge/hacking under your belt.</span></li><li><span style=\"color:#ce9178;\">An experienced engineer familiar with automated testing and deployment.</span></li><li><span style=\"color:#ce9178;\">Experienced with functional programming and domain-driven design or simply interested and capable of learning on the job.</span></li></ul>",
+      "role": "<p><span style=\"color:#ce9178;\">The role is more frontend-focused where you will be tasked to build browser-based UIs for Haskell applications.</span></p><ul><li><span style=\"color:#ce9178;\">Build up our tech stack around Haskell and introduce best practices.</span></li><li><span style=\"color:#ce9178;\">Contribute to the design of our conversational engine and the architecture supporting it.</span></li><li><span style=\"color:#ce9178;\">Design new UIs, working closely with users, stakeholders and the backend team.</span></li><li><span style=\"color:#ce9178;\">Maximize robustness, performance, and scalability of solutions.</span></li></ul><p>&nbsp;</p>"
+    }
+  },
+  {
+    "model": "jobs.job",
+    "pk": "cbc76a02-7d81-4305-9a8a-95c52a1eae90",
+    "fields": {
+      "position": "Senior Application Engineer",
+      "posted_at": "2024-01-24",
+      "contract": "full_time",
+      "location": "Japan",
+      "company": "2271e102-71d6-4573-bd7a-e4193b613396",
+      "apply": "https://example.com/officelite/apply",
+      "description": "<p><span style=\"color:#ce9178;\">Office Lite is seeking a talented and enthusiastic Senior Application Engineer whose primary responsibility is software architecture and development for Office Lite systems. Additional responsibilities include participation in project time/task estimation, code and architecture reviews, providing support for junior developers, documentation of system architecture and a supporting role for all phases of the development life-cycle (project definition, process mapping, architecture, coding, acceptance testing, installation, turnover to support, etc.).</span></p>",
+      "requirements": "<p><span style=\"color:#ce9178;\">As a hands-on subject matter expert, you will use expert-level engineering knowledge to provide technical support and help translate customer requirements into exciting new product features. You will be working within multi-disciplinary teams to create pervasive simulation solutions, advance your industry knowledge, and grow the business impact.​</span></p><ul><li><span style=\"color:#ce9178;\">Expert Node.js proficiency in a production environment.</span></li><li><span style=\"color:#ce9178;\">Proficiency in developing REST APIs.</span></li><li><span style=\"color:#ce9178;\">Expert proficiency with relational databases (MySQL) and optimizing SQL queries.</span></li><li><span style=\"color:#ce9178;\">Extensive experience with microservices-based architecture in production.</span></li><li><span style=\"color:#ce9178;\">Experience with CircleCI, Jenkins or similar CI/CD applications.</span></li></ul><p>&nbsp;</p><p>&nbsp;</p>",
+      "role": "<p><span style=\"color:#ce9178;\">You'll work alongside a skilled team of Senior Engineers across five countries participating in system design, architecture, maintenance, and refactoring decisions. You'll be working on new features and integrations and be active in code reviews and coordinating engineering efforts across teams and products.</span></p><ul><li><span style=\"color:#ce9178;\">Administering and configuring software.</span></li><li><span style=\"color:#ce9178;\">Identify opportunity and help to implement a monitoring solution for proactive and predictable operations.</span></li><li><span style=\"color:#ce9178;\">Triaging problems with applications - identifying known errors and problem trends and finding permanent solutions through root cause analysis.</span></li><li><span style=\"color:#ce9178;\">Providing level 2 and 3 application support.</span></li></ul><p>&nbsp;</p>"
+    }
+  },
+  {
+    "model": "jobs.job",
+    "pk": "d977e346-469e-4688-851e-0d738973d727",
+    "fields": {
+      "position": "Midlevel Back End Engineer",
+      "posted_at": "2024-01-25",
+      "contract": "part_time",
+      "location": "Norway",
+      "company": "c7441a84-7b5d-47ac-b16a-fd4ad7ad713c",
+      "apply": "https://example.com/vector",
+      "description": "<p><span style=\"color:#ce9178;\">We are looking for a Mid-level Back End Engineer to join our growing software engineering organization. The right person will help move our platform to the next level. You’ll be working as part of a skilled, collaborative team to jointly design and implement high visibility applications.</span></p>",
+      "requirements": "<p><span style=\"color:#ce9178;\">As our ideal candidate, you have previous experience in Ruby on Rails and are eager to continue to develop professionally. You work well in an agile environment, and collaborate well with other Software Engineers, Test Automation Engineers, Product Managers, and Designers. You thrive in a fast-paced environment, and are able to adapt when needed.</span></p><ul><li><span style=\"color:#ce9178;\">Active participation on a software development team designing, coding, testing, and releasing functionality to our customers.</span></li><li><span style=\"color:#ce9178;\">Close collaboration with other engineers and product managers to become a valued member of an autonomous, cross-functional team.</span></li><li><span style=\"color:#ce9178;\">Operational responsibility for the services that are owned by your team, potentially including taking part in an on-call rotation.</span></li></ul><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p>",
+      "role": "<p><span style=\"color:#ce9178;\">This is an IDEAL job if you already have a few years of software engineering experience under your belt, and you want to be part of a small, intensely skilled team, who feel total ownership of their work, and can’t imagine a day without learning &amp; coding. You will play a crucial role in the Vector platform and everything you do will matter.</span></p><ul><li><span style=\"color:#ce9178;\">Design, code, deploy, and test applications according to the user stories/requirements and industry best practices.</span></li><li><span style=\"color:#ce9178;\">Follow industry standard software lifecycle process when developing software.</span></li><li><span style=\"color:#ce9178;\">Conduct code-review with other developers.</span></li><li><span style=\"color:#ce9178;\">Assist in development and peer review of plans, technical solutions, and related documentation.</span></li></ul><p>&nbsp;</p><p>&nbsp;</p>"
+    }
+  }
+]
