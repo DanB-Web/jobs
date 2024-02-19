@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block content %}
+  <h1>Jobs search results</h1>
+  <form action="{% url 'search' %}" method="get">
+    <input name="q" type="text" placeholder="Search...">
+  </form>
+  <ul>
+    {% for job in jobs %}
+      <li>
+        <a href="{% url 'job' job.uuid %}">{{ job.position }}</a>
+      </li>
+    {% endfor %}
+  </ul>
+{% endblock content %}

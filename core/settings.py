@@ -12,8 +12,6 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
-# Application definition
-
 INSTALLED_APPS = [
     "django.contrib.admin",
     "django.contrib.auth",
@@ -26,7 +24,8 @@ INSTALLED_APPS = [
     "theme",
     "django_browser_reload",
     "users",
-    "jobs"
+    "jobs",
+    "contact"
 ]
 
 MIDDLEWARE = [
