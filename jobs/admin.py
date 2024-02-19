@@ -12,4 +12,9 @@ class JobAdmin(admin.ModelAdmin):
   list_display = ["position", "company", "contract", "location", "posted_at"]
   # Flags the company FK relationship and optimzes query
   list_select_related = ["company"]
+  list_filter = ("company", "contract", "location")
+  # Note syntax to search for FK releationship
+  search_fields = ("position", "company__company_name", "location")
   readonly_fields = ("uuid",)
+  list_per_page = 10
+  ordering = ('-posted_at',)

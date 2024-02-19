@@ -1,6 +1,15 @@
 {% extends "admin/base.html" %}
 {% load static %}
+{% comment %} Custom admin CSS file {% endcomment %}
 {% block extrastyle %}
   {{ block.super }}
   <link rel="stylesheet" type="text/css" href="{% static 'css/custom.css' %}" />
 {% endblock extrastyle %}
+{% comment %} Custom logo {% endcomment %}
+{% block branding %}
+  <img src="{% static 'img/logo.svg' %}"
+       height="40"
+       width="120"
+       alt="DevJobs logo" />
+  <h3>Admin dashboard</h3>
+{% endblock branding %}

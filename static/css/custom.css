@@ -1,3 +1,38 @@
 .ck-editor-container span {
   color: black !important;
 }
+
+#header,
+.module h2,
+.module caption,
+.inline-group h2,
+.button,
+input[type="submit"],
+input[type="button"],
+.submit-row input,
+a.button {
+  background-color: #5964e0;
+}
+
+.button.default,
+input[type="submit"].default,
+.submit-row input.default {
+  background-color: #939bf4;
+}
+
+#header h3 {
+  margin-top: 0.4rem;
+  margin-left: 2rem;
+  font-size: 1.2rem;
+  color: #fff;
+}
+
+div.breadcrumbs {
+  background-color: #939bf4;
+  font-weight: 700;
+}
+
+a:link,
+a:visited {
+  color: #000;
+}
