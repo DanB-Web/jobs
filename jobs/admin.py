@@ -16,5 +16,5 @@ class JobAdmin(admin.ModelAdmin):
   # Note syntax to search for FK releationship
   search_fields = ("position", "company__company_name", "location")
   readonly_fields = ("uuid",)
-  list_per_page = 10
+  list_per_page = 6
   ordering = ('-posted_at',)

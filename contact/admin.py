@@ -1,3 +1,7 @@
 from django.contrib import admin
+from .models import Contact
 
-# Register your models here.
+@admin.register(Contact)
+class ContactAdmin(admin.ModelAdmin):
+  readonly_fields = ("name", "email", "message", "contact_received")
+  list_display = ["name", "email", "contact_received", "replied"]

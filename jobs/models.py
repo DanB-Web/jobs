@@ -47,7 +47,6 @@ class Job(models.Model):
   def __str__(self):
     return f'{self.position} at {self.company}'
   
-  # Formatted propert to use in admin area
   @property
   def job(self):
     return f'{self.position} at {self.company}'
