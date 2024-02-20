@@ -1,6 +1,8 @@
 from django.views.generic import CreateView
 from django.urls import reverse_lazy
+from django.contrib import messages
 from .forms import ContactForm
+from jobs.models import Job 
 
 class ContactView(CreateView):
     form_class = ContactForm
@@ -9,10 +11,18 @@ class ContactView(CreateView):
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        # [TODO] - Add job details from params
-        context['job'] = 'Test job'
+        job_id = self.kwargs.get('pk', None)
+        job = Job.objects.filter(uuid=job_id).first()
+        context['job'] = job
         return context
 
     def form_valid(self, form):
+        job_id = self.request.POST.get('job_uuid', None)
+        print('job_id', job_id)
+        job = Job.objects.filter(uuid=job_id).first()
+        print('job', job)
+        form.save(commit=False)
+        form.instance.job = job
         form.save()
+        messages.success(self.request, 'Thank you for contacting us')
         return super().form_valid(form)

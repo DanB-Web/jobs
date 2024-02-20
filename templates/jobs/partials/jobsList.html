@@ -1,0 +1,8 @@
+<ul>
+  {% for job in jobs %}
+    <li>
+      <p>{{ job.position }}</p>
+      <a href="{% url 'job' job.uuid %}">Details</a>
+    </li>
+  {% endfor %}
+</ul>

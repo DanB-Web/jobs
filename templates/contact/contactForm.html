@@ -4,6 +4,7 @@
   {{ job }}
   <form method="post">
     {% csrf_token %}
+    <input type="hidden" value="{{ job.uuid }}" name="job_uuid" />
     {{ form.as_p }}
     <input type="submit" value="Contact" />
   </form>
