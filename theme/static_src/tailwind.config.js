@@ -56,9 +56,9 @@ module.exports = {
       gray: "#9DAEC2",
       darkGrey: "#6E8098",
     },
-    screens: {
-      lg: "1176px",
-    },
+    // screens: {
+    //   lg: "1176px",
+    // },
     extend: {},
   },
   plugins: [

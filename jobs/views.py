@@ -18,11 +18,23 @@ class JobsSearchResults(ListView):
   model = Job
   context_object_name = 'jobs'
 
+  '''
+  Note that you have to reassign to the queryset after each filter
+  '''
   def get_queryset(self):
-    query = self.request.GET.get("q")
-    queryset = Job.objects.filter(
-            Q(description__icontains=query) | Q(location__icontains=query) | Q(company__company_name__icontains=query)
+    job = self.request.GET.get("job")
+    location = self.request.GET.get("location")
+    contract = self.request.GET.get("contract")
+    queryset = Job.objects.all()
+    if job:
+      queryset = queryset.filter(
+            Q(position__icontains=job) | 
+            Q(company__company_name__icontains=job) 
         )
+    if location:
+      queryset = queryset.filter(location__icontains=location)
+    if contract == 'on':
+      queryset = queryset.filter(contract='full_time')
     return queryset
 
 

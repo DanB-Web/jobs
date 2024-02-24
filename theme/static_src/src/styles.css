@@ -47,9 +47,15 @@ footer {
   height: 5rem;
 }
 
+input[type="text"]:focus {
+  outline: none; /* Remove the default focus outline */
+  border: none; /* Remove the border on focus */
+}
+
 /*
 Default element styles
 */
+
 @layer base {
   h1 {
     @apply text-2xl;
@@ -60,11 +66,101 @@ Default element styles
   h4 {
     @apply text-sm;
   }
+  p {
+    @apply text-gray;
+  }
+  label {
+    @apply text-darkGrey;
+  }
+  input[type="text"] {
+    @apply border-none focus:ring-0 dark:bg-veryDarkBlue dark:text-darkGrey;
+  }
 }
 
 /*
 Custom classes
 */
+@layer components {
+  .btn-primary {
+    @apply p-2 rounded bg-violet text-white hover:bg-lightViolet cursor-pointer;
+  }
+  .btn-secondary {
+    @apply p-2 rounded bg-lightGrey text-[violet] cursor-pointer;
+  }
+}
+
+/*
+Custom checkbox
+*/
+
+/* Customize the label (the container) */
+.checkbox-container {
+  display: block;
+  position: relative;
+  padding-left: 2rem;
+  margin-right: 1rem;
+  cursor: pointer;
+  font-size: 1rem;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+.checkbox-container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 1.25rem;
+  width: 1.25rem;
+  background-color: #eee;
+  border-radius: 3px;
+}
+
+/* On mouse-over, add a grey background color */
+.checkbox-container:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+/* When the checkbox is checked, add a blue background */
+.checkbox-container input:checked ~ .checkmark {
+  background-color: #5963e1;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.checkbox-container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.checkbox-container .checkmark:after {
+  left: 0.5rem;
+  top: 0.2rem;
+  width: 5px;
+  height: 0.75rem;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
 
 /*
 Media queries

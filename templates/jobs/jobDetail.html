@@ -1,6 +1,5 @@
 {% extends "base.html" %}
 {% block content %}
-  <h1>Jobs detail</h1>
   {{ job.position }}
   <a href="{% url 'contact' job.uuid %}">Contact us</a>
   {% include "jobs/partials/footer.html" %}

@@ -1,4 +1,26 @@
-<form action="{% url 'search' %}" method="get">
-  <input name="q" type="text" placeholder="Search..." required>
-  <input type="submit" value="Search" />
+<form class="relative top-[-20px] flex flex-col md:flex-row bg-white dark:bg-veryDarkBlue rounded px-4 py-2"
+      action="{% url 'search' %}"
+      method="get">
+  <div class="flex items-center w-full md:w-[30%] mr-2 mb-2 md:mb-0 md:border-r-2 border-lightGrey dark:border-darkGrey">
+    {% include "icons/search.svg" %}
+    <input class="w-full ml-2 border-transparent"
+           name="job"
+           type="text"
+           placeholder="Job / Company">
+  </div>
+  <div class="flex items-center w-full ml-0.5 md:w-[30%] mr-2 mb-2 md:mb-0 md:border-r-2 border-lightGrey dark:border-darkGrey">
+    {% include "icons/location.svg" %}
+    <input class="w-full ml-3.5 md:ml-2 border-transparent"
+           name="location"
+           type="text"
+           placeholder="Location">
+  </div>
+  <div class="flex justify-center items-center w-full md:w-[25%] mb-3 md:mb-0">
+    <label class="text-g checkbox-container">
+      Full Time Only
+      <input name="contract" type="checkbox">
+      <span class="checkmark"></span>
+    </label>
+  </div>
+  <input class="btn-primary w-full md:w-[15%]" type="submit" value="Search" />
 </form>
