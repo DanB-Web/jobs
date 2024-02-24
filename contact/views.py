@@ -18,9 +18,7 @@ class ContactView(CreateView):
 
     def form_valid(self, form):
         job_id = self.request.POST.get('job_uuid', None)
-        print('job_id', job_id)
         job = Job.objects.filter(uuid=job_id).first()
-        print('job', job)
         form.save(commit=False)
         form.instance.job = job
         form.save()

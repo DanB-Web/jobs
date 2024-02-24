@@ -1,3 +1,115 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/*
+Font config
+*/
+@font-face {
+  font-family: "KumbhSans";
+  font-weight: 400;
+  src: url("../../../static/fonts/KumbhSans-Regular.ttf");
+}
+
+@font-face {
+  font-family: "KumbhSans";
+  font-weight: 700;
+  src: url("../../../static/fonts/KumbhSans-Bold.ttf");
+}
+
+/*
+Main element positioning
+*/
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  font-family: "KumbhSans", sans-serif;
+}
+
+header {
+  background-image: url(../../../static/img/header-desktop.svg);
+  background-size: 100% auto;
+  background-position: center;
+  border-radius: 0 0 0 5rem;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  min-height: calc(100vh - 6rem);
+  margin: auto;
+  width: 1100px;
+}
+
+footer {
+  margin-top: auto;
+  height: 5rem;
+}
+
+/*
+Default element styles
+*/
+@layer base {
+  h1 {
+    @apply text-2xl;
+  }
+  h2 {
+    @apply text-xl;
+  }
+  h4 {
+    @apply text-sm;
+  }
+}
+
+/*
+Custom classes
+*/
+
+/*
+Media queries
+
+Tailwind breakpoints
+
+  sm: 640px,
+  md: 768px,
+  lg: 1024px,
+  xl: 1280px,
+  2xl: 1536px,
+*/
+@media only screen and (max-width: 1280px) {
+  main {
+    width: 90%;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  header {
+    background-image: url(../../../static/img/header-tablet.svg);
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  header {
+    border-radius: 0 0 0 4rem;
+  }
+}
+
+@media only screen and (max-width: 640px) {
+  header {
+    background-image: url(../../../static/img/header-mobile.svg);
+  }
+}
+
+/*
+Utilities for testing
+*/
+.test-border {
+  border: 1px solid red;
+}
+
+/* @layer components {
+  .test-border {
+    @apply border-solid border-2 border-red-500;
+  }
+} */

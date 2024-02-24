@@ -1,0 +1,31 @@
+<header class="h-24">
+  <div class="header-container w-[90%] lg:w-[1100px] mx-auto mt-6 flex justify-between">
+    <a href="{% url 'job-list' %}">
+      <h1 class="text-white text-2xl font-semibold">devjobs</h1>
+    </a>
+    <div class="flex items-center">
+      {% include "icons/sun.svg" %}
+      <label class="cursor-pointer mx-2">
+        <input type="checkbox" id="mode-toggle" class="sr-only peer">
+        <div class="relative w-10 h-6 bg-white peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[4px] after:start-[4px] after:bg-violet after:border-gray-300 after:rounded-full after:h-4 after:w-4 after:transition-all">
+        </div>
+      </label>
+      {% include "icons/moon.svg" %}
+    </div>
+  </div>
+  <script>
+    const checkbox = document.getElementById("mode-toggle");
+
+    const htmlTag = document.documentElement;
+
+    console.log(htmlTag)
+
+    checkbox.addEventListener('change', function() {
+      if (this.checked) {
+        htmlTag.classList.add('dark')
+      } else {
+        htmlTag.classList.remove('dark')
+      }
+    });
+  </script>
+</header>

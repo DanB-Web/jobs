@@ -1,10 +1,8 @@
 {% extends "base.html" %}
 {% block content %}
   <h1>Jobs list</h1>
-  <form action="{% url 'search' %}" method="get">
-    <input name="q" type="text" placeholder="Search...">
-  </form>
-  {% include 'jobs/partials/jobsList.html' %}
+  {% include "jobs/partials/searchBar.html" %}
+  {% include "jobs/partials/jobsList.html" %}
   <div>
     <span>
       {% if page_obj.has_previous %}
