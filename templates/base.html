@@ -16,6 +16,7 @@
       {% block content %}
       {% endblock content %}
     </main>
+    {% include "jobs/partials/footer.html" %}
     {% if messages %}
       {% for message in messages %}<div class="messages">{{ message }}</div>{% endfor %}
     {% endif %}

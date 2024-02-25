@@ -1,3 +1,8 @@
-<footer>
-  Footer
-</footer>
+{% if footer %}
+  <footer class="w-full bg-white dark:bg-veryDarkBlue">
+    <div class="w-[90%] lg:w-[75%] xl:w-[900px] mx-auto px-4 h-full flex justify-between items-center">
+      <h2 class="font-bold dark:text-white">{{ job.position }}</h2>
+      <a class="btn-primary" href="{% url 'contact' job.uuid %}">Contact us</a>
+    </div>
+  </footer>
+{% endif %}

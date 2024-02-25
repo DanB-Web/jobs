@@ -44,7 +44,7 @@ main {
 
 footer {
   margin-top: auto;
-  height: 5rem;
+  height: 6rem;
 }
 
 input[type="text"]:focus {
@@ -96,34 +96,39 @@ Custom classes
 /*
 List styling for role / requirements lists
 */
+
 .requirements ul {
-  list-style-type: disc;
-  margin-top: 1rem;
-  margin-left: 1rem;
+  margin-top: 2rem;
+}
+
+.requirements li {
+  margin-bottom: 1rem;
+  padding-left: 1rem;
+}
+
+.requirements li::before {
+  content: ""; /* Empty content to prevent marker duplication */
+  display: inline-block; /* Make the content inline-block */
+  width: 8px; /* Set width of the content */
+  height: 8px; /* Set height of the content */
+  border-radius: 50%;
+  background-color: #5963e1; /* Set background color of the content */
+  margin-right: 1rem; /* Add some space between the content and the list text */
 }
 
 .role ul {
   list-style-type: decimal;
-  margin-top: 1rem;
-  margin-left: 1rem;
+  margin-top: 2rem;
+  margin-left: 2rem;
 }
 
-.requirements ul li::marker,
 .role ul li::marker {
   color: #5963e1;
 }
 
-.requirements ul li::marker {
-  font-size: 2rem;
-}
-
-.requirements li,
-.role li {
-  padding-left: 1rem;
-}
-
 .role li {
   margin-bottom: 1rem;
+  padding-left: 1rem;
 }
 
 /*

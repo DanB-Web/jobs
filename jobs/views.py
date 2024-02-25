@@ -76,4 +76,7 @@ class JobsDetail(DetailView):
       # Extract domain from the URL and add it to the context
       context['company_domain'] = urlparse(queryset.company.website).netloc
 
+      # Enable footer for this view
+      context['footer'] = True
+
       return context
