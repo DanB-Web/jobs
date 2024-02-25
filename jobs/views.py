@@ -1,4 +1,5 @@
 from django.db.models import Q
+from django.utils import timezone
 from django.views.generic import ListView, DetailView
 from .models import Job
 
@@ -9,8 +10,15 @@ class JobsList(ListView):
   paginate_by = 6
 
   def get_queryset(self):
-    queryset = Job.objects.all().order_by('posted_at')
+    queryset = Job.objects.all().order_by('-posted_at')
+
+    # Format posted date
+    for job in queryset:
+      delta = timezone.now().date() - job.posted_at
+      job.delta_days = delta.days
+
     return queryset
+  
   
 
 class JobsSearchResults(ListView):
@@ -35,6 +43,12 @@ class JobsSearchResults(ListView):
       queryset = queryset.filter(location__icontains=location)
     if contract == 'on':
       queryset = queryset.filter(contract='full_time')
+
+    # Format posted date
+    for job in queryset:
+      delta = timezone.now().date() - job.posted_at
+      job.delta_days = delta.days
+    
     return queryset
 
 

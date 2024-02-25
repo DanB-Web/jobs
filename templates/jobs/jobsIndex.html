@@ -2,7 +2,7 @@
 {% block content %}
   {% include "jobs/partials/searchBar.html" %}
   {% include "jobs/partials/jobsList.html" %}
-  <div>
+  <div class="flex justify-center md:justify-end mt-4 mb-6 text-violet font-semibold">
     <span>
       {% if page_obj.has_previous %}
         <a href="?page=1">First</a>

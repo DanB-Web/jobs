@@ -3,6 +3,8 @@ from django.db import models
 from django.core.validators import RegexValidator
 from django_ckeditor_5.fields import CKEditor5Field
 
+# note in template use get_FOO_display
+# i.e {{ job.get_contract_display }}
 CONTRACT_TYPES = [
   ('full_time', 'Full Time'),
   ('part_time', 'Part Time'),

@@ -1,5 +1,8 @@
 {% extends "base.html" %}
 {% block content %}
+  <div>
+    <img src={}>
+  </div>
   {{ job.position }}
   <a href="{% url 'contact' job.uuid %}">Contact us</a>
   {% include "jobs/partials/footer.html" %}
