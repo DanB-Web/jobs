@@ -55,6 +55,7 @@ module.exports = {
       white: "#FFFFFF",
       gray: "#9DAEC2",
       darkGrey: "#6E8098",
+      success: "#22C55E",
     },
     // screens: {
     //   lg: "1176px",

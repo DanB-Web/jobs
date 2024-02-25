@@ -10,7 +10,7 @@
     <script type="text/javascript" src="{% static '/js/scripts.js' %}" defer></script>
     {% tailwind_css %}
   </head>
-  <body class="bg-lightGrey dark:bg-midnight transition">
+  <body class="relative bg-lightGrey dark:bg-midnight transition">
     {% include "partials/header.html" %}
     <main>
       {% block content %}
@@ -18,7 +18,11 @@
     </main>
     {% include "jobs/partials/footer.html" %}
     {% if messages %}
-      {% for message in messages %}<div class="messages">{{ message }}</div>{% endfor %}
+      {% for message in messages %}
+        <div class="message absolute bottom-8 left-8 h-12 p-4 flex items-center bg-success text-white rounded">
+          {{ message }}
+        </div>
+      {% endfor %}
     {% endif %}
   </body>
 </html>

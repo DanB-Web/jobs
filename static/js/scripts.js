@@ -1,6 +1,7 @@
 const checkbox = document.getElementById("mode-toggle");
 const htmlTag = document.documentElement;
 const theme = sessionStorage.getItem("theme");
+const message = document.querySelector(".message");
 
 if (theme) {
   if (theme === "dark") {
@@ -21,3 +22,9 @@ checkbox.addEventListener("change", function () {
     sessionStorage.removeItem("theme");
   }
 });
+
+setTimeout(() => {
+  if (message) {
+    message.remove();
+  }
+}, 5000);

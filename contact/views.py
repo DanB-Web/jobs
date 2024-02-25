@@ -22,5 +22,5 @@ class ContactView(CreateView):
         form.save(commit=False)
         form.instance.job = job
         form.save()
-        messages.success(self.request, 'Thank you for contacting us')
+        messages.success(self.request, 'Thank you for contacting us!')
         return super().form_valid(form)
