@@ -82,11 +82,48 @@ Custom classes
 */
 @layer components {
   .btn-primary {
-    @apply px-4 py-2 rounded bg-violet text-white hover:bg-lightViolet cursor-pointer;
+    @apply w-40 py-3 flex justify-center rounded font-semibold bg-violet text-white hover:bg-lightViolet cursor-pointer;
   }
   .btn-secondary {
-    @apply px-4 py-2 rounded font-semibold bg-lightGrey dark:bg-darkGrey text-violet dark:text-white hover:bg-lightViolet hover:opacity-75 cursor-pointer;
+    @apply w-40 py-3 flex justify-center rounded font-semibold bg-lightGrey dark:bg-darkGrey text-violet dark:text-white hover:bg-lightViolet hover:opacity-75 cursor-pointer;
   }
+  .requirements,
+  .role {
+    @apply text-gray;
+  }
+}
+
+/*
+List styling for role / requirements lists
+*/
+.requirements ul {
+  list-style-type: disc;
+  margin-top: 1rem;
+  margin-left: 1rem;
+}
+
+.role ul {
+  list-style-type: decimal;
+  margin-top: 1rem;
+  margin-left: 1rem;
+}
+
+.requirements ul li::marker,
+.role ul li::marker {
+  color: #5963e1;
+}
+
+.requirements ul li::marker {
+  font-size: 2rem;
+}
+
+.requirements li,
+.role li {
+  padding-left: 1rem;
+}
+
+.role li {
+  margin-bottom: 1rem;
 }
 
 /*

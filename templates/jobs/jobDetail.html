@@ -18,16 +18,33 @@
          target="_blank">Company Site</a>
     </div>
   </div>
-  <div class="w-[95%] lg:w-4/5 mx-auto flex flex-col bg-white dark:bg-veryDarkBlue rounded-lg">
-    <div></div>
-    <div>
+  <div class="w-[95%] lg:w-4/5 mx-auto mb-8 flex flex-col bg-white dark:bg-veryDarkBlue p-6 rounded-lg">
+    <div class="flex flex-col md:flex-row justify-between md:items-center mb-8 md:mb-0">
+      <div class="mt-2 mb-4 md:mb-6">
+        {% if delta_days == 0 %}
+          <p class="mb-2">
+            Today <span class="mx-1">•</span> {{ job.get_contract_display }}
+          </p>
+        {% else %}
+          <p class="mb-2">
+            {{ delta_days }}d ago <span class="mx-1">•</span> {{ job.get_contract_display }}
+          </p>
+        {% endif %}
+        <h1 class="mb-2 font-bold dark:text-white">{{ job.position }}</h1>
+        <p>{{ job.location }}</p>
+      </div>
+      <a class="btn-primary h-12 w-full md:w-40"
+         href="https://www.example.com/{{ job.company.company_name }}"
+         target="_blank">Apply Now</a>
+    </div>
+    <div class="flex flex-col gap-y-4">
       <p>{{ job.description | safe }}</p>
-      <h2>Requirements</h2>
-      {{ job.requirements | safe }}
-      <h2>What You Will Do</h2>
-      {{ job.role | safe }}
+      <h2 class="font-bold dark:text-white">Requirements</h2>
+      <div class="requirements mb-6">{{ job.requirements | safe }}</div>
+      <h2 class="font-bold dark:text-white">What You Will Do</h2>
+      <div class="role mb-6">{{ job.role | safe }}</div>
     </div>
   </div>
-  <a href="{% url 'contact' job.uuid %}">Contact us</a>
+  <a class="btn-primary" href="{% url 'contact' job.uuid %}">Contact us</a>
   {% include "jobs/partials/footer.html" %}
 {% endblock content %}

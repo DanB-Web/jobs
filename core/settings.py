@@ -23,11 +23,16 @@ INSTALLED_APPS = [
     'django_ckeditor_5',
     "tailwind",
     "theme",
-    "django_browser_reload",
     "users",
     "jobs",
     "contact"
 ]
+
+if DEBUG:
+  INSTALLED_APPS += [
+    "debug_toolbar",
+    "django_browser_reload",
+  ]
 
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
@@ -39,6 +44,11 @@ MIDDLEWARE = [
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
     "django_browser_reload.middleware.BrowserReloadMiddleware"
 ]
+
+if DEBUG:
+  MIDDLEWARE += [
+    "debug_toolbar.middleware.DebugToolbarMiddleware",
+  ]
 
 INTERNAL_IPS = [
     "127.0.0.1",

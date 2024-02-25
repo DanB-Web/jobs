@@ -45,7 +45,7 @@ class JobsSearchResults(ListView):
     if contract == 'on':
       queryset = queryset.filter(contract='full_time')
 
-    # Format posted date
+    # OPTION 1 - format posted date on queryset itself
     for job in queryset:
       delta = timezone.now().date() - job.posted_at
       job.delta_days = delta.days
@@ -66,8 +66,12 @@ class JobsDetail(DetailView):
   def get_context_data(self, **kwargs):
       context = super().get_context_data(**kwargs)
 
-      # Get the queryset
       queryset = self.get_queryset()[0]
+
+      # OPTION 2 - Format posted day and add to context
+      queryset.job.delta_days = timezone.now().date() - queryset.posted_at
+      delta = timezone.now().date() - queryset.posted_at
+      context['delta_days'] = delta.days
 
       # Extract domain from the URL and add it to the context
       context['company_domain'] = urlparse(queryset.company.website).netloc

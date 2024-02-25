@@ -14,18 +14,16 @@ urlpatterns = [
     path("", include('jobs.urls')),
     # Contact app urls
     path("", include('contact.urls'))
-
-
-] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT) + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+]
 
 
 # Admin config
 admin.site.index_title = "DevJobs Administration Area"
 
-# if settings.DEBUG:
-#     # Add static url
-#     urlpatterns += static(settings.STATIC_URL)
-#     # Add media url
-#     urlpatterns += static(settings.MEDIA_URL)
-#     # Add docs url
-#     # urlpatterns += static(document_root=settings.MEDIA_ROOT)
+if settings.DEBUG:
+# Add static urls
+ urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+# Add media urls
+ urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+ # Add debug toolbar
+ urlpatterns += path("__debug__/", include("debug_toolbar.urls")),
