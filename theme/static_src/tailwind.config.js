@@ -47,7 +47,7 @@ module.exports = {
       kumbhSans: ["KumbhSans", "sans-serif"],
     },
     colors: {
-      violet: "#5963e1",
+      violet: "#5963E1",
       lightViolet: "#939BF4",
       lightGrey: "#F4F6F8",
       veryDarkBlue: "#19202D",

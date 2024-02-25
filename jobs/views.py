@@ -1,3 +1,4 @@
+from urllib.parse import urlparse
 from django.db.models import Q
 from django.utils import timezone
 from django.views.generic import ListView, DetailView
@@ -61,3 +62,16 @@ class JobsDetail(DetailView):
     job_id = self.kwargs['pk']
     queryset = Job.objects.filter(uuid=job_id)
     return queryset
+  
+  def get_context_data(self, **kwargs):
+      context = super().get_context_data(**kwargs)
+
+      # Get the queryset
+      queryset = self.get_queryset()[0]
+
+      print('query', queryset)
+
+      # Extract domain from the URL and add it to the context
+      context['company_domain'] = urlparse(queryset.company.website).netloc
+
+      return context

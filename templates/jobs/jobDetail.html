@@ -1,7 +1,22 @@
 {% extends "base.html" %}
 {% block content %}
-  <div>
-    <img src={}>
+  <div class="relative top-[-20px] lg:top-[-30px] h-24 w-[95%] lg:w-4/5 mx-auto flex bg-white dark:bg-veryDarkBlue rounded-lg">
+    <div style="background-color:{{ job.company.company_color }}"
+         class="h-24 w-24 flex justify-center items-center rounded-l-lg">
+      <img src="/media/{{ job.company.logo }}"
+           alt="{{ job.company.company_name }} logo"
+           width="70"
+           height="70">
+    </div>
+    <div class="flex grow justify-between items-center px-6">
+      <div>
+        <h2 class="font-semibold dark:text-white">{{ job.company.company_name }}</h2>
+        <p>{{ company_domain }}</p>
+      </div>
+      <a class="btn-secondary"
+         href="https://www.example.com/{{ job.company.company_name }}"
+         target="_blank">Company Site</a>
+    </div>
   </div>
   {{ job.position }}
   <a href="{% url 'contact' job.uuid %}">Contact us</a>

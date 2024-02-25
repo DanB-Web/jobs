@@ -82,10 +82,10 @@ Custom classes
 */
 @layer components {
   .btn-primary {
-    @apply p-2 rounded bg-violet text-white hover:bg-lightViolet cursor-pointer;
+    @apply px-4 py-2 rounded bg-violet text-white hover:bg-lightViolet cursor-pointer;
   }
   .btn-secondary {
-    @apply p-2 rounded bg-lightGrey text-[violet] cursor-pointer;
+    @apply px-4 py-2 rounded font-semibold bg-lightGrey text-violet hover:bg-lightViolet hover:opacity-75 cursor-pointer;
   }
 }
 
