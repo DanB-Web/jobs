@@ -18,7 +18,16 @@
          target="_blank">Company Site</a>
     </div>
   </div>
-  {{ job.position }}
+  <div class="w-[95%] lg:w-4/5 mx-auto flex flex-col bg-white dark:bg-veryDarkBlue rounded-lg">
+    <div></div>
+    <div>
+      <p>{{ job.description | safe }}</p>
+      <h2>Requirements</h2>
+      {{ job.requirements | safe }}
+      <h2>What You Will Do</h2>
+      {{ job.role | safe }}
+    </div>
+  </div>
   <a href="{% url 'contact' job.uuid %}">Contact us</a>
   {% include "jobs/partials/footer.html" %}
 {% endblock content %}

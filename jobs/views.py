@@ -69,8 +69,6 @@ class JobsDetail(DetailView):
       # Get the queryset
       queryset = self.get_queryset()[0]
 
-      print('query', queryset)
-
       # Extract domain from the URL and add it to the context
       context['company_domain'] = urlparse(queryset.company.website).netloc
 

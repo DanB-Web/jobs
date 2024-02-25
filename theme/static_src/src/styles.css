@@ -85,7 +85,7 @@ Custom classes
     @apply px-4 py-2 rounded bg-violet text-white hover:bg-lightViolet cursor-pointer;
   }
   .btn-secondary {
-    @apply px-4 py-2 rounded font-semibold bg-lightGrey text-violet hover:bg-lightViolet hover:opacity-75 cursor-pointer;
+    @apply px-4 py-2 rounded font-semibold bg-lightGrey dark:bg-darkGrey text-violet dark:text-white hover:bg-lightViolet hover:opacity-75 cursor-pointer;
   }
 }
 
