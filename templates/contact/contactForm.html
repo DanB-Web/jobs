@@ -1,11 +1,28 @@
 {% extends "base.html" %}
 {% block content %}
-  <h1>Contact form</h1>
-  {{ job }}
-  <form method="post">
-    {% csrf_token %}
-    <input type="hidden" value="{{ job.uuid }}" name="job_uuid" />
-    {{ form.as_p }}
-    <input type="submit" value="Contact" />
-  </form>
+  <div>
+    <div class="relative top-[-20px] lg:top-[-30px] h-24 w-[95%] lg:w-4/5 mx-auto flex items-center bg-white dark:bg-veryDarkBlue rounded-lg">
+      <div style="background-color:{{ job.company.company_color }}"
+           class="h-24 w-24 flex justify-center items-center rounded-l-lg">
+        <img src="/media/{{ job.company.logo }}"
+             alt="{{ job.company.company_name }} logo"
+             width="70"
+             height="70">
+      </div>
+      <h1 class="w-full text-center text-darkGrey dark:text-white">Contact us about {{ job }}</h1>
+    </div>
+    <form method="post"
+          class="flex flex-col items-center w-[95%] lg:w-4/5 mx-auto">
+      {% csrf_token %}
+      <input type="hidden" value="{{ job.uuid }}" name="job_uuid" />
+      {% for field in form %}
+        <div class="flex flex-col w-full mb-4">
+          <label class="text-darkGrey dark:text-white">{{ field.label }}</label>
+          {{ field }}
+          <span class="mt-2">{{ field.errors }}</span>
+        </div>
+      {% endfor %}
+      <input class="btn-primary" type="submit" value="Contact" />
+    </form>
+  </div>
 {% endblock content %}
