@@ -5,9 +5,9 @@ from bs4 import BeautifulSoup
 
 @receiver(pre_save, sender=Job)
 def strip_span_tags(sender, instance, **kwargs):
-    raw_description = BeautifulSoup(instance.description)
-    raw_requirements = BeautifulSoup(instance.requirements)
-    raw_role = BeautifulSoup(instance.role)
+    raw_description = BeautifulSoup(instance.description, features="html.parser")
+    raw_requirements = BeautifulSoup(instance.requirements, features="html.parser")
+    raw_role = BeautifulSoup(instance.role, features="html.parser")
 
     for span_tag in raw_description.find_all('span'):
       span_tag.replace_with_children()

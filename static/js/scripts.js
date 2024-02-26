@@ -27,4 +27,4 @@ setTimeout(() => {
   if (message) {
     message.remove();
   }
-}, 5000);
+}, 7000);
