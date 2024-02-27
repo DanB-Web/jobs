@@ -2,6 +2,7 @@ from django.conf import settings
 from django.conf.urls.static import static
 from django.contrib import admin
 from django.urls import include, path
+from theme.views import themeToggle
 
 urlpatterns = [
     # Admin area
@@ -10,6 +11,8 @@ urlpatterns = [
     path("__reload__/", include("django_browser_reload.urls")),
     # Admin WYSIWYG editor
     path("ckeditor5/", include('django_ckeditor_5.urls'), name="ck_editor_5_upload_file"),
+    # Theme toggle
+    path("theme", themeToggle),
     # Job app urls
     path("", include('jobs.urls')),
     # Contact app urls

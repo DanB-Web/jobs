@@ -1,12 +1,16 @@
 <header class="h-24">
   <div class="w-[90%] xl:w-[1100px] mx-auto mt-6 flex justify-between">
     <a href="{% url 'job-list' %}">
-      <h1 class="text-white text-2xl font-semibold">devjobs</h1>
+      <h1 class="text-white text-2xl font-semibold hover:pointer">devjobs</h1>
     </a>
     <div class="flex items-center">
       {% include "icons/sun.svg" %}
       <label class="cursor-pointer mx-2">
-        <input type="checkbox" id="mode-toggle" class="sr-only peer">
+        {% if request.session.theme == "dark" %}
+          <input type="checkbox" id="mode-toggle" class="sr-only peer" checked>
+        {% else %}
+          <input type="checkbox" id="mode-toggle" class="sr-only peer">
+        {% endif %}
         <div class="relative w-10 h-6 bg-white peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[4px] after:start-[4px] after:bg-violet after:border-gray-300 after:rounded-full after:h-4 after:w-4 after:transition-all">
         </div>
       </label>

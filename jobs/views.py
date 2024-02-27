@@ -51,6 +51,14 @@ class JobsSearchResults(ListView):
       job.delta_days = delta.days
     
     return queryset
+  
+  def get_context_data(self, **kwargs):
+      context = super().get_context_data(**kwargs)
+      context['job'] = self.request.GET.get("job")
+      context['location'] = self.request.GET.get("location")
+      context['contract'] = self.request.GET.get("contract")
+  
+      return context
 
 
 class JobsDetail(DetailView):

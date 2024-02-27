@@ -1,27 +1,31 @@
-<ul class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-6 gap-y-12 mt-8">
-  {% for job in jobs %}
-    <li class="col-span-1 relative flex flex-col p-6 rounded-lg bg-white dark:bg-veryDarkBlue">
-      <div style="background-color:{{ job.company.company_color }}"
-           class="absolute top-[-25px] left-6 h-12 w-12 flex justify-center items-center rounded-xl">
-        <img src="/media/{{ job.company.logo }}"
-             alt="{{ job.company.company_name }} logo"
-             width="30"
-             height="30">
-      </div>
-      {% if job.delta_days == 0 %}
-        <p class="pt-4">
-          Today <span class="mx-1">•</span> {{ job.get_contract_display }}
-        </p>
-      {% else %}
-        <p class="pt-4">
-          {{ job.delta_days }}d ago <span class="mx-1">•</span> {{ job.get_contract_display }}
-        </p>
-      {% endif %}
-      <a href="{% url 'job' job.uuid %}">
-        <h2 class="mt-2 mb-1 text-black dark:text-white font-semibold hover:text-darkGrey">{{ job.position }}</h2>
-      </a>
-      <p class="mt-2">{{ job.company.company_name }}</p>
-      <p class="mt-8 text-violet">{{ job.location }}</p>
-    </li>
-  {% endfor %}
-</ul>
+{% if jobs %}
+  <ul class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-6 gap-y-12 mt-8">
+    {% for job in jobs %}
+      <li class="col-span-1 relative flex flex-col p-6 rounded-lg bg-white dark:bg-veryDarkBlue">
+        <div style="background-color:{{ job.company.company_color }}"
+             class="absolute top-[-25px] left-6 h-12 w-12 flex justify-center items-center rounded-xl">
+          <img src="/media/{{ job.company.logo }}"
+               alt="{{ job.company.company_name }} logo"
+               width="30"
+               height="30">
+        </div>
+        {% if job.delta_days == 0 %}
+          <p class="pt-4">
+            Today <span class="mx-1">•</span> {{ job.get_contract_display }}
+          </p>
+        {% else %}
+          <p class="pt-4">
+            {{ job.delta_days }}d ago <span class="mx-1">•</span> {{ job.get_contract_display }}
+          </p>
+        {% endif %}
+        <a href="{% url 'job' job.uuid %}">
+          <h2 class="mt-2 mb-1 text-black dark:text-white font-semibold hover:text-darkGrey">{{ job.position }}</h2>
+        </a>
+        <p class="mt-2">{{ job.company.company_name }}</p>
+        <p class="mt-8 text-violet">{{ job.location }}</p>
+      </li>
+    {% endfor %}
+  </ul>
+{% else %}
+  <p class="mt-4 text-xl">No results found</p>
+{% endif %}
